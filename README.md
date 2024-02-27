@@ -70,7 +70,7 @@ Where`y` is the output vector and `t` is the target vector, introduced during tr
 
 $$ δ^{(i)}_{1} = {W_2}^{T} \cdot δ_2^{(j)} ⊙ a^{`}(z^{(i)}) $$
 
-Where `W2` denotes the transposed weight matrix for the hidden to output layer connections, and `a′i`is the derivative of the activation function given the weighted sum input. Now that we know the error, we proceed to update the weights associated with each connection: 
+Where `W2` denotes the transposed weight matrix for the hidden to output layer connections, and `a′i` is the derivative of the activation function given the weighted sum input. Now that we know the error, we proceed to update the weights associated with each connection: 
 
 
 #### Hidden-Output Layer Weights and Biases:
@@ -85,5 +85,12 @@ $$ {W^{1}} = {W^{1}} − η \cdot δ^{(i)}_{1} \cdot (x)^{T} $$
 
 $$ {b^{1}} = {b^{1}} − η \cdot δ^{(i)}_{1} $$
 
-Where`η`is the learning rate, which controls how much the weights are adjusted during each update.
+Where `η` is the learning rate, which controls how much the weights are adjusted during each update.
 
+## Results
+
+<p align="center">
+    <img src="diagrams/Waveform.png" width="75%" height="75%">
+</p>
+
+The waveforms show that after ~16 microseconds, the network is able to synchronize it's results with the expected target for an arbitrary test vector. While this result isn't useful as a metric on it's own, it provides a demonstration of the neural network's selective weight adjustment process. While the model was able to learn the XOR function, enhancements in configurability and performance optimization are needed for further applications. 
