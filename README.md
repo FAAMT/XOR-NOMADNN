@@ -40,11 +40,11 @@ The operations performed by the neuron can be mathematically expressed as:
 
 $$ z = \sum_{{i=0}}^{{n}} W_i x_i + b_i $$
 
-Where`NUM\_IN`represents the number of inputs our neuron will process. In our design, there are two inputs per neuron for the hidden layer neurons and four inputs for our output layer neuron. A hidden neuron calculation can then be expressed like this: 
+Where`NUM_IN`represents the number of inputs our neuron will process. In our design, there are two inputs per neuron for the hidden layer neurons and four inputs for our output layer neuron. A hidden neuron calculation can then be expressed like this: 
 
 $$ z^{(i)} = W^{(i)}[1] \cdot x[1] + W^{(i)}[0] \cdot x[0] + b^{(i)} $$
 
-Here, the ACCUM output is fed through the ReLU activation function, which is denoted by`a^{(i)} $: 
+Here, the ACCUM output is fed through the ReLU activation function, which is denoted by `a^{(i)}`: 
 
 $$ a^{(i)} = ReLU(z^{(i)}) $$
 
@@ -64,7 +64,7 @@ The algorithm that we use to correct the error in each layer is known as gradien
 
 $$ δ^{(j)}_{2} = y - t $$
 
-Where`y` is the output vector and `t` is the target vector, introduced during training. The hidden layer error can then be calculated as follows:
+Where `y` is the output vector and `t` is the target vector, introduced during training. The hidden layer error can then be calculated as follows:
 
 `for i in 0 to HIDDEN_NEURONS-1:`
 
